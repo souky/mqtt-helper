@@ -1,2 +1,24 @@
-# mqtt-helper
-mqtt助手，提供mqtt连接、发布、订阅等功能，可以记忆配置
+# appview
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

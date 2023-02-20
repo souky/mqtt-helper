@@ -1,0 +1,108 @@
+#home{
+  width: 98%;
+  margin: auto;
+  height: 100vh;
+  overflow: hidden;
+
+  .title{
+    width: 100%;
+    height: 60px;
+    color:#666;
+    border-bottom:1px solid #c7c7c7;
+    font-size: 30px;
+    line-height: 60px;
+    margin:auto;
+    text-align: center;
+    color: #fff;
+  }
+  .sub-title{
+    width: 100%;
+    height: 30px;
+    color:#666;
+    border-bottom:1px solid #c7c7c7;
+    font-size: 18px;
+    line-height: 30px;
+    margin:auto;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    .el-button{
+      position: absolute;
+      right: 0;
+
+    }
+  }
+
+  .mqtt-from{
+    display: flex;
+    flex-wrap: wrap;
+    .el-select{
+      width: 100%;
+    }
+    .el-form-item__label{
+      color: #fff;
+    }
+    .el-form-item{
+      margin:5px 1%;
+      width: 31%;
+    }
+  }
+
+  .mqtt-data{
+    margin-top: 10px;
+    height: calc(100vh - 202px);
+    display: flex;
+    .part{
+      width: 48%;
+      margin: 0 1%;
+    }
+  }
+
+  .re-titles{
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding:0 10px;
+  }
+
+  .mqtt-receive{
+    background: #000;
+    height: calc(100vh - 580px);
+    overflow: auto;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    .re-title{
+      line-height: 18px;
+      border-bottom: 1px solid #747474;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+    }
+    .re-body{
+      font-size: 14px;
+      margin: 5px 0;
+      color:#62ed2a;
+    }
+  }
+
+  .el-table th.el-table__cell,.el-table__body-wrapper{
+    background-color: #1d1d1d;
+  }
+
+  .el-table .el-table__cell{
+    padding: 5px 0;
+    color:#e9e9e9;
+  }
+  .el-table tr {
+    background-color: #333333;
+  }
+  .el-table--enable-row-hover .el-table__body tr:hover>td.el-table__cell {
+    background-color: #626262;
+  }
+}

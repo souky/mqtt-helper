@@ -102,12 +102,19 @@ export default {
       this.connectLoading = true
       this.connectCount = 0
       let clientId = 'mqttjs_' + Math.random().toString(16).substr(2, 8)
-      if(address.indexOf('http') == -1) address = `http://${address}:${port}${mount}`
-      else{
-        address = `${address}:${port}${mount}`
+      if(address.indexOf('http') == -1) {
+        if(this.$isEmpty(port)){
+          address = `http://${address}${mount}`
+        }else{
+          address = `http://${address}:${port}${mount}`
+        }
       }
-      if(this.$isEmpty(port)){
-        address = `${address}${mount}`
+      else{
+        if(this.$isEmpty(port)){
+          address = `${address}${mount}`
+        }else{
+          address = `${address}:${port}${mount}`
+        }
       }
       let options = {
         clean: true,	// 保留会话

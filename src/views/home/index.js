@@ -99,15 +99,15 @@ export default {
       if(this.$isEmpty(address)){
         this.msgError('主机地址错误')
       }
-      if(this.$isEmpty(port)){
-        this.msgError('端口号错误')
-      }
       this.connectLoading = true
       this.connectCount = 0
       let clientId = 'mqttjs_' + Math.random().toString(16).substr(2, 8)
       if(address.indexOf('http') == -1) address = `http://${address}:${port}${mount}`
       else{
         address = `${address}:${port}${mount}`
+      }
+      if(this.$isEmpty(port)){
+        address = `${address}${mount}`
       }
       let options = {
         clean: true,	// 保留会话
